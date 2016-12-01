@@ -21,6 +21,7 @@ import {
 import  Refer  from "./refer";
 import * as tabsactions from '../../redux/modules/tabs'
 import * as modalactions from '../../redux/modules/modal'
+import ChoiceBox from './choicebox/choicebox'
 
 const TabPane = Tabs.TabPane;
 
@@ -113,6 +114,7 @@ class TabList extends Component {
             this.list.push(
               <TabPane tab={pane.title} key={pane.key}>
                 <p/>这是首页桌面
+                <ChoiceBox/>
               </TabPane>);
             this.keylist.push(pane.key);
           }
