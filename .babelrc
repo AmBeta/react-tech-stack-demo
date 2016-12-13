@@ -20,7 +20,9 @@
       "plugins": [
         ["antd"],
         ["css-modules-transform", {
-          "generateScopedName": "[name]__[local]___[hash:base64:5]"
+          "generateScopedName": "[name]__[local]___[hash:base64:5]",
+          "extensions": [".css", ".less"],
+          "preprocessCss": "less-loader",
         }]
       ]
     }
