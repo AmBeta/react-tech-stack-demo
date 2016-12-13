@@ -16,7 +16,7 @@
         "react-hmre"
       ]
     },
-    "node": {
+    "server": {
       "plugins": [
         ["antd"],
         ["css-modules-transform", {
