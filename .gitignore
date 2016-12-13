@@ -7,6 +7,7 @@ debug-client.bat
 debug-server.bat
 # Exclude compiled files
 build
+bin
 
 # Exclude IDE project folders
 .happypack
