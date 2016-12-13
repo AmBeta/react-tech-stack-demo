@@ -13,14 +13,23 @@ var manifestFileName = process.env.BABEL_ENV === 'production' ?
 
 var config = {
   entry: {
-    'index': './src/client/index.jsx',
-    //'business-index': './src/client/cube/index.js',
+    'index': './src/server/app.jsx'
   },
+
+  target: 'node',
+
   output: {
-    publicPath: 'http://localhost:8082/',
+    publicPath: 'http://localhost:8083/',
     path: path.join(__dirname, './'),
     filename: 'static/scripts/[name].js'
   },
+
+  node: {
+    __filename: true,
+    __dirname: true,
+    console: true
+  },
+
   externals: {
     cb: 'window.cb',
   },
@@ -46,7 +55,7 @@ var config = {
         test: /\.less$/,
         loaders: [
           "style-loader",
-          "css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]",
+          "css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]",
           "less-loader"
         ],
         include: origin,
@@ -54,7 +63,7 @@ var config = {
         test: /\.css$/,
         loaders: [
           "style-loader",
-          "css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]"
+          "css-loader?modules&localIdentName=[name]_[local]_[hash:base64:3]"
         ],
         include: origin,
       }
@@ -83,7 +92,7 @@ var config = {
     },
     hot: true,
     inline: true,
-    port: 8082,
+    port: 8083,
   },
   devtool: 'source-map',
   cache: true,

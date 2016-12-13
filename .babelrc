@@ -5,14 +5,23 @@
     "stage-1"
   ],
   "plugins": [
-    [
-      "antd"
-    ]
+    ["antd"],
+    // ["css-modules-transform", {
+    //   "generateScopedName": "[name]__[local]___[hash:base64:5]"
+    // }]
   ],
   "env": {
     "development": {
       "presets": [
         "react-hmre"
+      ]
+    },
+    "node": {
+      "plugins": [
+        ["antd"],
+        ["css-modules-transform", {
+          "generateScopedName": "[name]__[local]___[hash:base64:5]"
+        }]
       ]
     }
   }
