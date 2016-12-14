@@ -22,9 +22,10 @@
         ["css-modules-transform", {
           "generateScopedName": "[name]__[local]___[hash:base64:5]",
           "extensions": [".css", ".less"],
-          "preprocessCss": "less-loader",
+          "preprocessCss": "./less-require-hook.js",
         }]
       ]
     }
-  }
+  },
+  "ignore": ["./less-require-hook.js"]
 }
