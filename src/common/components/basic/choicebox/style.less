@@ -1,8 +1,10 @@
-.bordered {
-  border: 1px solid #ddd;
+@import "../../../../client/theme/variables";
+
+.bordered-box {
+  border: 1px solid @main-color;
   min-height: 60px;
   padding: 1px 3px;
   &:hover {
-    background: #fefefe;
+    background: @main-color;
   }
 }

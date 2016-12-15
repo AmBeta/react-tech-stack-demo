@@ -75,7 +75,7 @@ export default class ChoiceBox extends React.Component {
     return (
       <Row>
         <Col span={8}>
-          <div className={styles.bordered}>
+          <div className={styles.borderedBox}>
             {items}
             {items.length == 0 &&
               <Button size="large" type="dashed"

@@ -46,7 +46,7 @@ var config = {
         test: /\.less$/,
         loaders: [
           "style-loader",
-          "css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]",
+          "css-loader?modules&camelCase&localIdentName=[name]__[local]___[hash:base64:5]",
           "less-loader"
         ],
         include: origin,
@@ -54,7 +54,7 @@ var config = {
         test: /\.css$/,
         loaders: [
           "style-loader",
-          "css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]"
+          "css-loader?modules&camelCase&localIdentName=[name]__[local]___[hash:base64:5]"
         ],
         include: origin,
       }
